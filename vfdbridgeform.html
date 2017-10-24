@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<title> VFD FIXED DEPOSIT FORM</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+
+	<header> 
+			<img src="logo.png"/><h1> FIXED DEPOSIT PLACEMENT FORM</h1>
+		</header>
+	
+		<div id=container>
+			<p id="instruction">Thank you for choosing to invest with VFD Bridge. 
+				We are pleased to have the opportunity to offer our services to you. 
+				Kindly provide ALL your details below (as applicable) to aid the processing of your placement.</p>
+			<hr>
+		<form>
+			<br>
+
+		Full name<br>
+		<input type="text" id="fullname" name="fullname" value="fullname" required>
+		<br>
+		University<br>
+		<input type="text" id="university" name="university" value="university" required>
+		<br>
+		<br>
+		<input type="button" name="submit" value="submit" onclick= "details()">
+	</form>
+	</div>
+	<script type="text/javascript">
+		function details() {
+			 var fullname = document.getElementById("fullname").value;
+			 var university = document.getElementById("university").value;
+			 window.alert (fullname +" "+ university);
+
+		}
+		
+	
+	</script>
+
+
+</body>
+</html>

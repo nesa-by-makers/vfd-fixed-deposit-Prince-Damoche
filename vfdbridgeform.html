@@ -2,43 +2,187 @@
 <html>
 <head> 
 	<title> VFD FIXED DEPOSIT FORM</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
-
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="jquery-3.2.1.min.js"></script>
+	
 </head>
 <body>
+		<header> 
+				<img src="logo.png"/>
+				<h1> FIXED DEPOSIT PLACEMENT FORM</h1>
+			</header>
 
-	<header> 
-			<img src="logo.png"/><h1> FIXED DEPOSIT PLACEMENT FORM</h1>
-		</header>
-	
-		<div id=container>
+		<div id="container">
 			<p id="instruction">Thank you for choosing to invest with VFD Bridge. 
 				We are pleased to have the opportunity to offer our services to you. 
 				Kindly provide ALL your details below (as applicable) to aid the processing of your placement.</p>
 			<hr>
-		<form>
-			<br>
+			<form class="form-horizontal" action="vfdnew.php" method="POST">
 
-		Full name<br>
-		<input type="text" id="fullname" name="fullname" value="fullname" required>
-		<br>
-		University<br>
-		<input type="text" id="university" name="university" value="university" required>
-		<br>
-		<br>
-		<input type="button" name="submit" value="submit" onclick= "details()">
-	</form>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" id="name" for="name">Full Name:</label>
+				  <div class="col-sm-10">
+					<input type="text" class="form-control" id="name" placeholder="" name="firstname">
+				  </div>
+				  <p id="alert"></p>
+				</div>
+
+				<div class="form-group">
+				  <label class="control-label col-sm-2" id="password" for="pwd">Phone number:</label>
+				  <div class="col-sm-10">          
+					<input type="text" class="form-control" id="pwd" placeholder="" name="phonenumber">
+				  </div>
+				  <p id="alert"></p>
+				</div>
+
+				<div class="form-group">
+						<label class="control-label col-sm-2" id="residential" for="resident">Residental Address:</label>
+						<div class="col-sm-10">          
+						<textarea  rows="5" cols="90" class="form-control" id="resident" placeholder="" name="residentialaddress"></textarea>
+						</div>
+						<p id="alert"></p>
+					</div>
+
+					<div class="form-group">
+							<label class="control-label col-sm-2" id="pffice" for="office">Office Address:</label>
+							<div class="col-sm-10">          
+							<textarea  rows="5" cols="90" class="form-control" id="Office" placeholder="" name="officeaddress"></textarea>
+							</div>
+							<p id="alert"></p>
+						</div>
+
+						<div class="form-group">
+								<label class="control-label col-sm-2" id="occupation" for="pwd">Occupation:</label>
+								<div class="col-sm-10">          
+								<input type="text" class="form-control" id="occupation" placeholder="" name="occupation">
+								</div>
+								<p id="alert"></p>
+							</div>
+
+							<hr>
+							<h2>PLACEMENT INFORMATION</h2>
+							
+							<div class="form-group">
+									<label class="control-label col-sm-2" id="duration" for="duration">Proposed Duration:</label>
+									<div class="col-sm-10">          
+									<input type="text" class="form-control" id="proposedduration" placeholder="" name="proposedduration">
+									</div>
+									<p id="alert"></p>
+								</div>
+
+								<div class="form-group">
+										<label class="control-label col-sm-2" id="proposedamount" for="amount">Amount:</label>
+										<div class="col-sm-10">          
+										<input type="number" class="form-control" id="amount" placeholder="" name="amount">
+										</div>
+										<p id="alert"></p>
+									</div>
+
+										<hr>
+
+									<h2>PAY-OUT DETAILS</h2>
+									
+									<div class="form-group">
+											<label class="control-label col-sm-2" id="accountnum" for="accountnumber">Account Number:</label>
+											<div class="col-sm-10">          
+											<input type="text" class="form-control" id="accountnumber" placeholder="" name="accountnumber">
+											</div>
+											<p id="alert"></p>
+										</div>
+
+										<div class="form-group">
+												<label class="control-label col-sm-2" id="accountname" for="accountname">Account Name:</label>
+												<div class="col-sm-10">
+												<input type="text" class="form-control" id="accountname" placeholder="" name="accountname">
+												</div>
+												<p id="alert"></p>
+											</div>
+
+											<div class="form-group">
+													<label class="control-label col-sm-2" id="bank" for="bank">Name Of Bank:</label>
+													<div class="col-sm-10">
+													<input type="text" class="form-control" id="bank" placeholder="" name="nameofbank">
+													</div>
+													<p id="alert"></p>
+												</div>
+												<hr>
+
+												<h2>NEXT OF KIN DETAILS</h2>
+												
+												<div class="form-group">
+														<label class="control-label col-sm-2" id="nextofkin" for="kin">Full Name:</label>
+														<div class="col-sm-10">
+														<input type="text" class="form-control" id="kinname" placeholder="" name="name">
+														</div>
+														<p id="alert"></p>
+													</div>
+
+													<div class="form-group">
+															<label class="control-label col-sm-2" id="kinnumber" for="nextofkin">Phone number:</label>
+															<div class="col-sm-10">          
+															<input type="text" class="form-control" id="kinnumber" placeholder="" name="phonenumber">
+															</div>
+															<p id="alert"></p>
+														</div>
+
+														<div class="form-group">
+																<label class="control-label col-sm-2" id="kinmail" for="nextofkin">E-mail:</label>
+																<div class="col-sm-10">          
+																<input type="text" class="form-control" id="kinmail" placeholder="" name="email">
+																</div>
+																<p id="alert"></p>
+															</div>
+
+															<div class="form-group">
+																	<label class="control-label col-sm-2" id="kinreference" for="nextofkin">Reference:</label>
+																	<div class="col-sm-10">          
+																	<input type="text" class="form-control" id="kinreference" placeholder="" name="reference">
+																	</div>
+																	<p id="alert"></p>
+																</div>
+
+																<label class="control-label col-sm-2" id="signature" for="signature">Signature:</label>
+																<input type="text" id="signature" name="signature">
+																<br>
+
+																<label class="control-label col-sm-2" id="date" for="date">Date:</label>
+																<input type="text" id="date" name="date">
+
+				<div class="form-group">        
+				  <div class="col-sm-offset-2 col-sm-10">
+					
+				  </div>
+				</div>
+				<div class="form-group">        
+				  <div class="col-sm-offset-2 col-sm-10">
+					<!-- <input type="submit" class="btn btn-default" value="Submit"> -->
+				  </div>
+				</div>
+				<input type="submit" class="btn btn-default" value="Submit">
+				</form>
+				<footer><h3>NOTE THAT EVERY INFORMATION SUPPLIED IS CONFIDENTIAL.</h3></footer>
 	</div>
-	<script type="text/javascript">
-		function details() {
-			 var fullname = document.getElementById("fullname").value;
-			 var university = document.getElementById("university").value;
-			 window.alert (fullname +" "+ university);
+	<!--<script>
+$(document).ready(function preventload(){
+	$(this).submit(function(e){
+		e.preventDefault();
+	});
+    $("#btn1").click(function(){
+        $("#test1").text(function(i, origText){
+            return "Input is not okay"; 
+        });
+    });
 
-		}
-		
-	
-	</script>
+    $("#btn2").click(function(){
+        $("#test2").html(function(origText){
+            return " Input is okay"; 
+        });
+    });
+});
+</script>
 
 
 </body>

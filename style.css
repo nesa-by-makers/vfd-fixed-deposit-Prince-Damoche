@@ -1,52 +1,106 @@
 body{
-	background-color: grey;
-	font-family: verdana;
-	font-size: 12px;
+	background-color: grey !important;
+	font-family: roboto !important;
+	font-size: 12px !important;
 }
-h1, header{
-	padding: 1%;
-	color: #fff;
-	background-color: #000080; 
-	text-align: center;
-	margin: auto;
-	width: 61%;
-	font-family: verdana;
-	font-size: 20px;
+header{
+	padding: 1% !important;
+	color: #fff !important;
+	background-color: #000080 !important; 
+	width: 61% !important;
+	margin: 0 auto !important;
+	
 }
-
+@media only screen and (max-width: 500px) {
+    h1, header {
+		width: 100% !important;
+    }
+}
+@media only screen and (max-width: 800px) {
+    h1, header {
+        width: 100% !important;
+    }
+}
+h1 {
+	font-family: roboto !important;
+	font-size: 20px !important;
+	text-align: right !important;
+	margin-right: 10px;
+}
+img {
+	width: 40 !important;
+	text-align: left !important; 
+}
 #container{
-	background-color: white;
+	background-color: white !important;
 	margin: 0 auto;
-	width: 60%;
-	padding: 20px;
-	height: 1000px;
-	overflow: auto;
+	width: 60% !important;
+	padding: 20px !important;
+	height: 100% !important;
+	
+}
+@media only screen and (max-width: 500px) {
+    #container{
+        width: 100% !important;
+    }
+}
+@media only screen and (max-width: 800px) {
+    #container {
+        width: 100% !important;
+    }
 }
 
-p{
-	margin: 0;
-	padding: 2%;
-	text-align: center;
-	font-family: verdana;
-	font-size: 12px;
+p#instruction{
+	margin-top: 500px auto!important;
+	padding: 2% !important;
+	text-align: center !important;
+	font-family: roboto !important;
+	font-size: 12px !important;
 	 
 }
-input[type=text], input[type=number]
+input[type=text], input[type=number], textarea
 {
-	text-align: left;
+	text-align: left !important;
 	width: 95%;
-	padding: 5px 5px;
-	margin: 6px 0;
-	font-family: verdana;
-	font-size: 12px;
+	padding: 5px 5px !important;
+	margin: 6px 0 !important;
+	font-family: roboto !important;
+	font-size: 12px !important;
+		border: 1px solid black !important;
+		height: 30px;
+		border-radius: 5px;
 }
 h2{
-	padding: 1%;
-	color: #fff;
-	background-color: #000080; 
-	text-align: left;
-	margin: 5px 0;
-	width: 40%;
-	font-family: verdana;
-	font-size: 20px;
+	padding: 1% !important;
+	color: #fff !important;
+	background-color: #000080 !important; 
+	text-align: left !important;
+	margin: 5px 0 !important;
+	width: 70% !important;
+	font-family: roboto !important;
+	font-size: 20px !important;
+	border-radius: 5px;
+}
+.btn {
+	border: 1px solid black;
+	height: 30px;
+	border-radius: 5px;
+	color: #fff !important;
+	background-color: #000080 !important; 
+	font-family: roboto !important;
+	margin: 10px;
+}
+#signature, #date {
+	width: 20% !important;
+	padding: 10px !important;
+	margin-left: 5px !important;
+	height: 30px;
+}
+h3 {
+	color: #000080 !important; 
+	padding: 10px;
+	text-align: center;
+}
+hr {
+	color: rgba(17, 16, 16, 0.3);
 }
